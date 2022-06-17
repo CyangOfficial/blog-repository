@@ -1,0 +1,10 @@
+import SvgIcon from '@/components/SvgIcon' // 引入自定义组件
+
+import Vue from 'vue'
+// 注册全局组件，组建名为svg-icon
+Vue.component('svg-icon', SvgIcon)
+
+// 引用svg图标
+const requireAll = requireContext => requireContext.keys().map(requireContext)
+const req = require.context('@/assets/svg', true, /\.svg$/)
+requireAll(req)

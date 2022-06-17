@@ -1,0 +1,18 @@
+// 移动端尺寸
+$phone: 996px;
+$pc: 1024px;
+
+$flex-jc: (
+  start: flex-start,
+  center: center,
+  end: flex-end,
+  between: space-between,
+  around: space-around
+);
+
+$flex-ai: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  stretch: stretch //默认值。元素被拉伸以适应容器。
+);

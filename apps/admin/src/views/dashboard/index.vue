@@ -1,0 +1,58 @@
+<template>
+  <div class="dashboard-container">
+    <CardGroup />
+    <div class="chart-container">
+      <el-card class="card-box">
+        <template #header>
+          <div class="card-header">头部</div>
+        </template>
+        <LineChart :chart-data="lineChartData" />
+      </el-card>
+    </div>
+  </div>
+</template>
+
+<script>
+import { ref } from 'vue'
+import CardGroup from './components/CardGroup.vue'
+import LineChart from './components/LineChart.vue'
+export default {
+  name: 'DashBoard',
+  components: {
+    CardGroup,
+    LineChart
+  },
+  setup () {
+    const data = {
+      newVisitis: {
+        expectedData: [100, 120, 161, 134, 105, 160, 165],
+        actualData: [120, 82, 91, 154, 162, 140, 145]
+      },
+      messages: {
+        expectedData: [200, 192, 120, 144, 160, 130, 140],
+        actualData: [180, 160, 151, 106, 145, 150, 130]
+      },
+      purchases: {
+        expectedData: [80, 100, 121, 104, 105, 90, 100],
+        actualData: [120, 90, 100, 138, 142, 130, 130]
+      },
+      shoppings: {
+        expectedData: [130, 140, 141, 142, 145, 150, 160],
+        actualData: [120, 82, 91, 154, 162, 140, 130]
+      }
+    }
+
+    const lineChartData = ref(data.newVisitis)
+    return {
+      lineChartData
+    }
+  }
+}
+</script>
+<style lang='scss' scoped>
+.dashboard-container {
+  .chart-container {
+    margin-top: 30px;
+  }
+}
+</style>

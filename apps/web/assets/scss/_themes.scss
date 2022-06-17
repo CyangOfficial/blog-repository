@@ -1,0 +1,80 @@
+$white: rgb(245, 246, 247);
+$gray1: #EFEFEF;
+$gray2: #CBC8C0;
+$gray3: #969696;
+$gray6: #666;
+
+$dark1: #2c3e50;
+
+$white1: #f5f6f7;
+
+$default-theme : (
+  bg-color: #fff,
+  notice-color: #969696,
+  notice-bg-color: #fbfbfb,
+  notice-border: rgb(29, 31, 39),
+  navs-color: #6e6e6e,
+  border-color: #8f8484,
+  section-title: #666666,
+  post-title: #504e4e,
+  post-meta: #969696,
+  post-create-time: #969696,
+  post-content: #504e4e,
+  post-bg: #fff,
+  post-hover: #dd3333,
+  m-header-bg: rgba(255, 255, 255, 0.2),
+  m-header: $white,
+  sidebar-bg: #fff,
+  sidebar-tit1: #000,
+  sidebar-tit2: #999,
+  sidebar-tit3: #666,
+  sidebar-navs: #464646,
+  post-r-text1: $gray6,
+  ranking-bg: rgba(245, 245, 245, 0.8),
+  ranking-link: $gray3,
+  pagination-bg: $gray1,
+  pagination-color: #0f0f0f,
+  pagination-active-bg: rgba(60, 211, 142, 1),
+  pagination-active-color: #fff,
+  post-level-title: $dark1,
+  single-code: rgba(27, 31, 35, 0.05),
+  md-level-border: #eaecef
+);
+$dark-theme: (
+  bg-color: #181a1b,
+  notice-bg-color: #1d1f27,
+  notice-border: rgb(230, 230, 230),
+  notice-color: $white,
+  navs-color: $white,
+  border-color: $white,
+  section-title: $white,
+  post-title: $white,
+  post-meta: #cbc8c0,
+  post-create-time: $gray2,
+  post-content: $white,
+  post-bg: #1d1f27,
+  post-hover: #a84141,
+  footer: $white,
+  m-header-bg: rgba(0, 0, 0, 0.2),
+  m-header: #dbdde4,
+  sidebar-bg: #21252B,
+  sidebar-tit1: #FFF,
+  sidebar-tit2: #f0f0f0,
+  sidebar-tit3: #f0f0f0,
+  sidebar-navs: #eaeaea,
+  post-r-text1: $white1,
+  ranking-bg: rgba(27, 29, 30, 0.8),
+  ranking-link: $gray2,
+  pagination-bg: #2F313A,
+  pagination-color: #fff,
+  pagination-active-bg: rgba(60, 211, 142, 0.5),
+  pagination-active-color: #fff,
+  post-level-title: $white1,
+  single-code: $dark1,
+  md-level-border: rgb(230, 230, 230)
+);
+
+$themes: (
+  default-theme: $default-theme,
+  dark-theme: $dark-theme
+);
