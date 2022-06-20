@@ -1,0 +1,1 @@
+import{_ as e}from"./index.eff4e99b.js";import{A as s,B as o,D as t,H as n}from"./vendor.cb65b9e0.js";const c=s({components:{},setup(){}}),a={class:"p-4"},r=n("div",{class:"post-table-list"}," sdf ",-1),d=[r];function _(i,p,f,l,m,u){return o(),t("div",a,d)}var h=e(c,[["render",_]]);export{h as default};

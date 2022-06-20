@@ -17,7 +17,6 @@ service.interceptors.request.use(
   config => {
     // do something before request is sent
     // config.headers['-Token'] = getToken()
-    console.log('request')
     return config
   },
   error => {

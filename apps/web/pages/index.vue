@@ -102,7 +102,6 @@ export default {
     };
   },
   mounted() {
-    console.log('mounted')
     this.fetchPostData();
   },
   methods: {
@@ -119,7 +118,6 @@ export default {
       footEl && this.loadMoreObserver.observe(footEl);
     },
     fetchPostData() {
-      console.log('fetchHandle')
       getPosts(this.postParams)
         .then(res => {
           const { result } = res;

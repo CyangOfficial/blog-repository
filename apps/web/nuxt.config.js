@@ -4,39 +4,32 @@ export default {
     host: 'localhost',
     port: '8080'
   },
+  mode: 'spa',
   ssr: false,
+  // target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'cyang-blog',
-    htmlAttrs: {
-      lang: 'en'
-    },
-    meta: [{
-      charset: 'utf-8'
-    },
-    {
-      name: 'viewport',
-      content: 'width=device-width, initial-scale=1'
-    },
-    {
-      hid: 'description',
-      name: 'description',
-      content: ''
-    },
-    {
-      name: 'format-detection',
-      content: 'telephone=no'
-    }
-    ],
-    link: [{
-      rel: 'icon',
-      type: 'image/x-icon',
-      href: '/favicon.ico'
-    },
-      // { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' },
-      // { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css' }
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: 'Meta description' },
+      { name: 'format-detection', content: 'telephone=no' },
+      { name: 'referrer', content: 'no-referrer' },
+      // { 'http-equiv': 'Content-Security-Policy', content: "default-src * gap:; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src *; img-src * data: blob: android-webview-video-poster:; style-src * 'unsafe-inline';" }
+      // { 'http-equiv': "Content-Security-Policy", content: "default-src 'self' http://localhost:3000;" }
+      { 'http-equiv': "Content-Security-Policy", content: "img-src 'self' https://cyy-blog-1258211293.cos.ap-beijing.myqcloud.com;" }
     ]
   },
+
+  // link: [{
+  //   rel: 'icon',
+  //   type: 'image/x-icon',
+  //   href: '/favicon.ico'
+  // },
+  //   // { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' },
+  //   // { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css' }
+  // ]
 
   // axios: {
   //   baseURL: 'http://localhost:3000/api',
@@ -87,12 +80,21 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // '@nuxtjs/axios'
+    // 'nuxt-helmet'
   ],
+
+  // router: {
+  //   base: '/'
+  // },
+
+  generate: {
+    dir: __dirname + '/../server/public/web/'
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    extractCSS: true,
-    // transpile: [''],
+    extractCSS: false,
+    publicPath: '/static/',
     extend(config, ctx) {
       // 排除 nuxt 原配置的影响,Nuxt 默认有vue-loader,会处理svg,img等
       // 找到匹配.svg的规则,然后将存放svg文件的目录排除

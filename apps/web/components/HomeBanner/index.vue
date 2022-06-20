@@ -67,7 +67,7 @@ export default {
     left: 0;
     z-index: 3;
     background-attachment: fixed;
-    background-image: url("https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/dot.gif");
+    background-image: url("~@/assets/images/dot.gif");
   }
   &::after {
     content: "";

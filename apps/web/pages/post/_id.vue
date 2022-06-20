@@ -70,7 +70,6 @@
 import { getItemPost } from "@/api/post";
 export default {
   validate({ params, query }) {
-    console.log(params);
     return true;
   },
   asyncData(ctx, callback) {
