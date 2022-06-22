@@ -88,7 +88,7 @@ export default {
   // },
 
   generate: {
-    dir: __dirname + '/../server/public/web/'
+    dir: __dirname + '/../server/dist/public/web/'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
