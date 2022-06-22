@@ -126,7 +126,7 @@ export default {
   overflow: hidden;
   @include theme_transition(background);
 
-  /deep/ .progressive-image {
+  ::v-deep .progressive-image {
     min-height: 100%;
 
     .progressive-image-main {

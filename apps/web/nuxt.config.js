@@ -18,7 +18,7 @@ export default {
       { name: 'referrer', content: 'no-referrer' },
       // { 'http-equiv': 'Content-Security-Policy', content: "default-src * gap:; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src *; img-src * data: blob: android-webview-video-poster:; style-src * 'unsafe-inline';" }
       // { 'http-equiv': "Content-Security-Policy", content: "default-src 'self' http://localhost:3000;" }
-      { 'http-equiv': "Content-Security-Policy", content: "img-src 'self' https://cyy-blog-1258211293.cos.ap-beijing.myqcloud.com;" }
+      // { 'http-equiv': "Content-Security-Policy", content: "img-src 'self' https://cyy-blog-1258211293.cos.ap-beijing.myqcloud.com;" }
     ]
   },
 
