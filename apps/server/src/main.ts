@@ -17,8 +17,8 @@ async function bootstrap() {
   // app.enableCors();
   // app.use(csurf());
   app.setGlobalPrefix('api');
-  app.useStaticAssets(join(__dirname, '..', 'dist/public/web'), { prefix: '/' })
-  app.useStaticAssets(join(__dirname, '..', 'dist/public/admin'), { prefix: '/admin' })
+  app.useStaticAssets(join(__dirname, '..', '/public/web'), { prefix: '/' })
+  app.useStaticAssets(join(__dirname, '..', '/public/admin'), { prefix: '/admin' })
   // swagger option
   const options = new DocumentBuilder()
     .setTitle('nest-blog')
